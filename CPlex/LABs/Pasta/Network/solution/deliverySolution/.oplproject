@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project>
+	<version>1.0</version>
+	<description>Production model with network</description>
+	<configs>
+		<config category="opl" default="true" name="Configuration1">
+			<ref type="model" name="delivery.mod">
+			</ref>
+			<ref type="setting" name="delivery.ops">
+			</ref>
+			<ref type="data" name="delivery.dat">
+			</ref>
+		</config>
+	</configs>
+	
+</project>

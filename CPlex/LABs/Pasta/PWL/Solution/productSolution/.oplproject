@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project>
+  <version>1.0</version>
+  <description>A production model using tuples</description>
+  <configs>
+    <config name="Configuration1" default="true" category="opl">
+      <ref name="product.mod" type="model"/>
+      <ref name="product.dat" type="data"/>
+    </config>
+  </configs>
+</project>

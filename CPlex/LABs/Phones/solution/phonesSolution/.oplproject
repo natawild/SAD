@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project>
+	<version>1.0</version>
+	<description>The telephone production problem</description>
+	<configs>
+		<config category="opl" default="false" name="Configuration1">
+			<ref type="model" name="phones.mod">
+			</ref>
+		</config>
+		<config category="opl" default="false" name="Configuration2">
+			<ref type="model" name="phones1.mod">
+			</ref>
+			<ref type="data" name="phones1.dat">
+			</ref>
+		</config>
+		<config category="opl" default="false" name="Configuration3">
+			<ref type="data" name="phones2.dat">
+			</ref>
+			<ref type="model" name="phones1.mod">
+			</ref>
+		</config>
+		<config category="opl" default="true" name="Configuration4">
+			<ref type="model" name="phones_MIP.mod">
+			</ref>
+			<ref type="data" name="phones2.dat">
+			</ref>
+		</config>
+		<config category="opl" default="false" name="Configuration5">
+			<ref type="model" name="phones_MIP.mod">
+			</ref>
+			<ref type="data" name="phones1.dat">
+			</ref>
+		</config>
+	</configs>
+</project>

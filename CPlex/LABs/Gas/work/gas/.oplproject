@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project>
+  <version>1.0</version>
+  <description>A simple gas production model</description>
+  <configs>
+    <config name="Default" default="true" category="opl">
+      <ref name="gas.mod" type="model"/>
+      <ref name="gas.dat" type="data"/>
+    </config>
+  </configs>
+</project>

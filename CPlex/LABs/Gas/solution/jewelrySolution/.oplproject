@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project>
+	<version>1.0</version>
+	<description>Solution to practice, Lesson 1)</description>
+	<configs>
+		<config category="opl" default="true" name="Configuration0">
+			<ref type="data" name="jewelry.dat">
+			</ref>
+			<ref type="model" name="gas.mod">
+			</ref>
+		</config>
+	</configs>
+	
+</project>

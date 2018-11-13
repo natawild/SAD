@@ -1,0 +1,6 @@
+Products = { "rings", "earrings" };
+Components = { "Gold", "Diamonds" };
+
+usage = [ [3, 1], [2, 2] ];
+stock = [ 150, 180, ];
+profit = [ 60, 40 ];

@@ -1,0 +1,47 @@
+/*********************************************
+ * OPL Model
+ * Author: IBM ILOG
+ *********************************************/
+ 
+{string} Products = ...;
+{string} Resources = ...;
+
+tuple productData {
+   float demand;
+   float insideCost;
+   float outsideCost;   //Consumption has been removed
+}
+
+tuple consumptionData
+{
+  string product;
+  string resource;
+  float c;           //The amount of the resource needed to produce 
+                     //1 unit of the product
+}
+
+{consumptionData} consumption=...; //declares a set of values which are 
+                                   //instances of the tuple "consumptionData"
+
+productData product[Products] = ...;
+float availability[Resources] = ...;
+float maxOutsideProduction = ...; // The maximum amount that may be outsourced for any product.
+
+dvar float+ insideProduction[Products];
+dvar float+ outsideProduction[Products] in 0..maxOutsideProduction;
+
+//Create two reusable expressions using decision variables to separate 
+//inside overall cost from outside overall cost. 
+//For the inside cost, define the breakpoint where inside costs triple.
+
+
+//Rewrite the objective function to minimize the sum of the two overall costs.
+minimize
+   sum(p in Products) (product[p].insideCost*insideProduction[p] + 
+                       product[p].outsideCost*outsideProduction[p]);
+subject to {
+   forall(r in Resources)
+      resourceAvailability: sum(<p,r,c> in consumption) c * insideProduction[p] <= availability[r];
+   forall(p in Products)
+      demandFulfillment: insideProduction[p] + outsideProduction[p] >= product[p].demand;
+}

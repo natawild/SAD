@@ -1,0 +1,64 @@
+Products =  { "kluski" "capellini" "fettucine" };
+Resources = { "flour" "eggs" };
+Locations = { "L1" "L2" };
+Warehouses = { "W1" "W2" "W3" "W4" "W5" "W6" "W7" };
+
+outsideCost = 
+{<"kluski", 0.8 >,       
+<"capellini", 0.9 >,      
+<"fettucine", 0.4 >};
+          
+availability =            // resource availability is now location-specific
+{<"flour","L1",120>,
+<"flour","L2",140>,
+<"eggs","L1",150>,
+<"eggs","L2",200>};
+
+demand =            // demand is now warehouse-specific
+{<"kluski","W1",40>,      
+<"kluski","W2",30>,      
+<"kluski","W3",50>,      
+<"kluski","W4",20>,      
+<"kluski","W5",0>,      
+<"kluski","W6",50>,      
+<"kluski","W7",40>,      
+<"capellini","W1",100>,      
+<"capellini","W2",50>,      
+<"capellini","W3",80>,      
+<"capellini","W4",70>,      
+<"capellini","W5",70>,      
+<"capellini","W6",20>,      
+<"capellini","W7",10>,   
+<"fettucine","W1",80>,      
+<"fettucine","W2",150>,      
+<"fettucine","W3",70>,      
+<"fettucine","W4",60>,      
+<"fettucine","W5",60>,      
+<"fettucine","W6",90>,      
+<"fettucine","W7",90>};
+
+consumption =                 
+{<"kluski","flour",0.5>,     
+<"kluski","eggs",0.2>,
+<"capellini","flour",0.4>,   
+<"capellini","eggs",0.4>,
+<"fettucine","flour",0.3>,    
+<"fettucine","eggs",0.6>};
+
+insideCost =              // InsideCost is now location specific
+{<"kluski","L1",0.6>,
+<"kluski","L2",0.7>,
+<"capellini","L1",0.8>,
+<"capellini","L2",0.7>,
+<"fettucine","L1",0.3>,
+<"fettucine","L2",0.4>};
+
+maxOutsideProduction = 200;   // contractual maximum amount that may be outsourced for any product.
+maxOutsideFlow = 100;   // contractual maximum amount that may be shipped to any one warehouse.
+
+// initialize the arcs without having to declare zero values
+internalArc = 
+// fill in here
+
+externalArc = 
+// fill in here

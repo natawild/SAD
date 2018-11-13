@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings version="2">
+  <category name="cplex">
+    <setting name="feasoptmode" value="2"/>
+  </category>
+  <category name="language">
+    <setting name="forceusage" value="true"/>
+    <setting name="relaxationlevel" value="labeledconstraints"/>
+  </category>
+</settings>

@@ -1,0 +1,7 @@
+Products = { "desk" "cell" };
+Atime = [0.2 0.4];
+Ptime = [0.5 0.4];
+Aavail = 400;
+Pavail = 490;
+minProd = [100 100];
+profit = #[desk:12 cell:20]#;

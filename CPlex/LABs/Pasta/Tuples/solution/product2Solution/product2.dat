@@ -1,0 +1,21 @@
+Products =  { "kluski" "capellini" "fettucine" };
+Resources = { "flour" "eggs" };
+
+product = #[
+      kluski : < 100, 0.6, 0.8 >       //consumption has been
+      capellini : < 200, 0.8, 0.9 >    //removed from this tuple. 
+      fettucine : < 300, 0.3, 0.4 >    //There are no more arrays in it.
+          ]#;
+          
+availability = [ 120, 150 ];
+
+consumption=                  //This instantiation of the tuple set
+{<"kluski","flour",0.5>,      //"consumption" replaces the array
+<"capellini","flour",0.4>,    //that was formerly in the "ProductData"
+<"fettucine","flour",0.3>,    //tuple.
+<"kluski","eggs",0.2>,
+<"capellini","eggs",0.4>,
+<"fettucine","eggs",0.6>};
+
+maxOutsideProduction = 200; // contractual maximum amount that may be outsourced for any product.
+

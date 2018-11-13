@@ -1,0 +1,9 @@
+Products = { "gas" "chloride" };
+Components = { "nitrogen" "hydrogen" "chlorine" };
+
+usage = [ [1 3 0] [1 4 1] ];
+profit = [30 40]; /*lucros*/
+stock = [50 180 40];
+
+
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project>
+  <version>1.0</version>
+  <configs>
+    <config name="Configuration1" default="true" category="opl">
+      <ref name="product2.mod" type="model"/>
+      <ref name="product2.dat" type="data"/>
+      <ref name="product2.ops" type="setting"/>
+    </config>
+  </configs>
+</project>

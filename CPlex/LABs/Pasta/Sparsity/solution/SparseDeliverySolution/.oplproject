@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project>
+  <version>1.0</version>
+  <description>Production model with network</description>
+  <configs>
+    <config name="Configuration1" default="true" category="opl">
+      <ref name="SparseDelivery.dat" type="data"/>
+      <ref name="SparseDelivery.mod" type="model"/>
+      <ref name="SparseDelivery.ops" type="setting"/>
+    </config>
+  </configs>
+</project>
