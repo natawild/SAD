@@ -49,7 +49,9 @@ tuple availabilityData
 // create a tuple named "internalLinkData" containing location, warehouse, and cost
 tuple internalLinkData // declare allowable internal routes
 {
-
+	string location;
+	string warehouse; 
+	float cost;
 }
 // declare the "internalArc" set, making sure that any instance includes the 
 // locations and warehouses from the "internalLinkData" tuple
@@ -58,7 +60,8 @@ tuple internalLinkData // declare allowable internal routes
 // create a tuple named "externalLinkData" containing warehouse and cost
 tuple externalLinkData // declare allowable external routes
 {
-
+	string warehouse;
+	float cost;
 }
 // declare the "externalArc" set, making sure that any instance includes the 
 // warehouses from the "externalLinkData" tuple
