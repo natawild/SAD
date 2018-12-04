@@ -1,12 +1,15 @@
-<?xml version="1.0" encoding="ASCII"?>
-<project>
-  <version>1.0</version>
-  <description>Production model with network</description>
-  <configs>
-    <config name="Configuration1" default="true" category="opl">
-      <ref name="updatedSparseDelivery.mod" type="model"/>
-      <ref name="updatedSparseDelivery.dat" type="data"/>
-      <ref name="updatedSparseDelivery.ops" type="setting"/>
-    </config>
-  </configs>
+<?xml version="1.0" encoding="ASCII"?><project>
+	<version>1.0</version>
+	<description>Production model with network</description>
+	<configs>
+		<config default="true" name="Configuration1" category="opl">
+			<ref name="SparseDelivery.mod" type="model">
+			</ref>
+			<ref name="SparseDelivery.ops" type="setting">
+			</ref>
+			<ref name="SparseDelivery.dat" type="data">
+			</ref>
+		</config>
+	</configs>
+	
 </project>

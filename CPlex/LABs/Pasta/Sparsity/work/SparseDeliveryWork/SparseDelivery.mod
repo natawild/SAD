@@ -46,35 +46,21 @@ tuple availabilityData
 }
 {availabilityData} availability with r in Resources, l in Locations = ...;
 
-// create a tuple named "internalLinkData" containing location, warehouse, and cost
 tuple internalLinkData // declare allowable internal routes
 {
-	string location;
-	string warehouse; 
-	float cost;
+  key string l;
+  key string w;
+  float cost;
 }
-// declare the "internalArc" set, making sure that any instance includes the 
-// locations and warehouses from the "internalLinkData" tuple
+{internalLinkData} internalArc with l in Locations, w in Warehouses = ...;
 
-
-// create a tuple named "externalLinkData" containing warehouse and cost
 tuple externalLinkData // declare allowable external routes
 {
-	string warehouse;
-	float cost;
+  key string w;
+  float cost;
 }
-// declare the "externalArc" set, making sure that any instance includes the 
-// warehouses from the "externalLinkData" tuple
+{externalLinkData} externalArc with w in Warehouses = ...;
 
-/********************************************************
- * The tuples "internalLinkData" and "externalLinkData" *
- * and the other new material                           *
- * replace these lines from delivery.prj:               *
- *                                                      *
- * int internalArc[Locations][Warehouses]=...;          *
- * int externalArc[Warehouses]=...;                     *
- ********************************************************/
- 
 float maxOutsideProduction = ...; 
 float maxOutsideFlow = ...; 
 
@@ -85,17 +71,13 @@ dvar float+ outsideProduction[Products] in 0..maxOutsideProduction;
 dvar float+ insideFlow[Products][internalArc];
 dvar float+ outsideFlow[Products][externalArc] in 0..maxOutsideFlow;
 
-// revise the objective function to take the new structure into account
-
 minimize
     // add the production costs
     sum(<p,l,ic> in insideCost) ic * insideProduction[p][l]
-    + sum(<p,oc> in outsideCost)(oc * outsideProduction[p]) // OK
+    + sum(<p,oc> in outsideCost)(oc * outsideProduction[p])
     // add the transportation costs
-    // Replace the next two lines with expressions that use the newly defined tuples
-    // and arc sets
-    + sum(p in Products, l in Locations, w in Warehouses)(internalArc[l][w] * insideFlow[p][l][w])
-    + sum(p in Products, w in Warehouses)(externalArc[w] * outsideFlow[p][w]);
+    + sum(p in Products, i in internalArc)(i.cost * insideFlow[p][i])
+    + sum(p in Products, e in externalArc)(e.cost * outsideFlow[p][e]);
     
 subject to {
    // resource availability constraint
@@ -107,23 +89,13 @@ subject to {
       demandFulfillment: sum(<w,c> in externalArc)(outsideFlow[p][<w,c>]) 
       + sum(<l,w,c> in internalArc )(insideFlow[p][<l,w,c>]) >= d;
        
-// Rewrite the following two constraints to take the new definitions of the insideFlow
-// and outsideFlow variables into account
    // the amount outsourced to warehouses should equal the outside production
    forall(p in Products)
-      outsideBalance: sum(w in Warehouses )(outsideFlow[p][w]) == outsideProduction[p];
+      outsideBalance: sum(e in externalArc )(outsideFlow[p][e]) == outsideProduction[p];
       
    // the amount shipped from production locations should equal the inside production
    forall(p in Products, l in Locations)
-      insideBalance: sum(w in Warehouses)(insideFlow[p][l][w])
+      insideBalance: sum(<l,w,c> in internalArc)(insideFlow[p][<l,w,c>])
       == insideProduction[p][l];
     
-// The remaining constraints are no longer needed, as these conditions
-// are guaranteed by the new data structure itself.
-   forall(p in Products, l in Locations, w in Warehouses : internalArc[l][w] == 0)
-      insideFlow[p][l][w] == 0;
-   forall(p in Products, w in Warehouses : externalArc[w]==0)
-      outsideFlow[p][w] == 0;
-      
 }
-
