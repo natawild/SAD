@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project>
+	<version>1.0</version>
+	<description>product/promotion display  in a supermarket</description>
+	<configs>
+		<config category="opl" default="true" name="Configuration1">
+			<ref type="model" name="mart.mod">
+			</ref>
+			<ref type="data" name="mart.dat">
+			</ref>
+		</config>
+	</configs>
+	
+</project>

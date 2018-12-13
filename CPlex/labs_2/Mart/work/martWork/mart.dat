@@ -1,0 +1,40 @@
+/*********************************************
+ * OPL 6.3 Data
+ * Author: IBM ILOG
+ *********************************************/
+
+// Using Set with external Initialization ( .dat file : plain file, Excel, Data Base...)
+// <ProductName,ProfitMargin,UnitVolume,IsCold?>
+products = { <"Pasta",1.,,1,0>, 
+			 <"Tomato Sauce" , 1.1,,1,0>,
+			 <"Salami",1.5,,1,1>,
+ 		     <"Rice",.5,,1,0>, 
+ 		     <"Soya Sauce",.5,,1,0>, 
+ 		     <"Chicken Wing",1.,1,1>
+ 			  }; 
+ 					   
+ // Using Set with external Initialization ( .dat file : plain file, Excel, Data Base...)	
+ // <ProductName,MinimumStock,MaximumStock>				   
+supplies = { <"Pasta",100,1000>,
+ 			<"Tomato Sauce",100,1000>,
+ 			<"Salami",50,300>,
+ 			<"Rice",100,1000>,
+ 			<"Soya Sauce",100,1000>,
+ 			<"Chicken Wing",40,1000>
+ 			};
+ 
+// Using Set with external Initialization ( .dat file : plain file, Excel, Data Base...)
+// <Name,MaximumVolume,SalesAccelerator,IsCold?>
+shelves = { 		   <"SuperPromoFridge", 100, 1.5,1>
+					   <"StandardShelf", 1000, .5,0>,
+					   <"PromoFridge", 100, 1,1>,
+					   <"PromoShelf", 1000, 1,0>,
+					   <"StandardFridge", 100, .5,1>,
+					   <"StandardShelf", 1000, .5,0>,
+					   <"PromoFridge", 100, 1,1>,
+					   <"PromoShelf", 1000, 1,0>,
+					   <"StandardFridge", 100,.5,1>,
+					   <"StandardShelf", 1000, .5,0>,
+					   <"PromoFridfe", 100, 1,1>,
+					   <"SuperPromoShelf", 1000, 1.5,0>};
+					   

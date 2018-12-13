@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project>
+  <version>1.0</version>
+  <description>A warehouse location model</description>
+  <configs>
+    <config name="Configuration1" default="true" category="opl">
+      <ref name="warehouse.mod" type="model"/>
+      <ref name="warehouse.dat" type="data"/>
+    </config>
+  </configs>
+</project>
