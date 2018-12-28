@@ -4,4 +4,7 @@
  * Creation Date: 19/11/2018 at 10:34:39
  *********************************************/
 
- Produtos= {}; 
+Produtos={"P1","P2","P3"};
+Clientes={"C1","C2","C3"};
+Fornecedores={"S1","S2"}; 
+Componentes= {"",""}
