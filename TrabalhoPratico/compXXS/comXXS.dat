@@ -1,0 +1,112 @@
+/*********************************************
+ * OPL 12.8.0.0 Data
+ * Author: Celia
+ * Creation Date: 19/01/2019 at 15:16:06
+ *********************************************/
+
+Produtos={"P1","P2","P3"};
+Clientes={"C1","C2","C3"};
+Componentes={"X1","X2"};
+Fornecedores={"S1","S2"};
+
+//perido de estudo 
+P=45; 
+
+//capacidade de R1
+capacidadeR1 = 8;
+
+//custo da Extensao da capacidade
+custoExtensaoCapacidade=2000;
+
+
+//Custo de produzir cada Produto
+custoProducao = [25,15,15]; 
+
+//custos pelos Atrasos
+custoAtraso= [10,5,5]; 
+
+//custos dos atrasos 
+custoNaoEntrega= [350,250,180]; 
+
+//custo de armazenamento dos tres produtos 
+custoArmazenamentoProduto = [2,1,1];
+
+//Custo de armazenamento de uma componente
+custoArmazenarComponente = [0.5 ,0.5];
+
+//Custo das componentes 
+custoUnitarioPorComponenteS1= [60, 30];
+custoUnitarioPorComponenteS2= 80;
+
+
+//consumo da procura de X1 e X2
+consumoComponentes = [[3000,1000],[2000,1000],[1000,1000]];
+
+
+//Consumo em horas de R1
+consumoR1 = [6,4,4];
+
+//Tempo de processamento 
+tempoDeProcessamentoProdutos = [1,1,1]; 
+
+
+//Taxa de producao
+taxaProducao = [1000, 1000, 1000];
+   
+  
+procura =[[[150, 100, 150],[350, 120, 155],[252, 101, 250]],
+   [[103, 150, 253],[123,50,250],[251, 100, 100]],
+   [[100, 100, 100],[100, 100, 100],[140, 130,30]]]; 
+   
+ /*  
+procura=                  //This instantiation of the tuple set
+{<"P1","C1",1, 200>,      //"consumption" replaces the array
+<"P1","C1",2,300>,    //that was formerly in the "ProductData"
+<"P1","C1",3,300>,    //tuple.
+<"P1","C1",4,300>,
+<"P1","C1",5,300>,
+<"P1","C1",6,300>,
+<"P1","C1",7,300>,
+<"P1","C1",8,300>,
+<"P1","C1",9,300>,
+<"P1","C1",10,300>,
+<"P1","C1",11,300>,
+<"P1","C1",12,300>,
+<"P1","C1",13,300>,
+<"P1","C1",14,300>,
+<"P1","C1",15,300>,
+<"P1","C1",16,300>,
+<"P1","C1",17,300>,
+<"P2","C1",18,300>,
+<"P1","C2",18,300>,
+<"P2","C2",18,300>,
+<"P2","C3",19,300>,
+<"P2","C2",36,300>,
+<"P2","C2",37,300>,
+<"P2","C2",38,300>,
+<"P2","C3",39,300>,
+<"P2","C3",40,300>,
+<"P2","C3",41,300>,
+<"P2","C3",42,300>,
+<"P2","C3",43,300>,
+<"P3","C3",21,300>,
+<"P3","C3",22,300>,
+<"P3","C3",23,300>,
+<"P3","C2",25,300>,
+<"P3","C3",25,200>,
+<"P3","C2",26,200>,
+<"P3","C2",27,100>,
+<"P3","C2",18,100>,
+<"P3","C2",28,300>,
+<"P3","C3",29,300>,
+<"P3","C3",30,200>,
+<"P3","C1",31,400>,
+<"P3","C1",32,300>,
+<"P3","C2",33,500>,
+<"P3","C1",34,600>,
+<"P2","C1",35,300>,
+<"P2","C3",43,300>,
+<"P3","C3",44,300>,
+<"P3","C3",45,300>,
+<"P1","C3",23,300>};   
+*/

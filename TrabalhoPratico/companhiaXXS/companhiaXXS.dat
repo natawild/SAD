@@ -6,5 +6,37 @@
 
 Produtos={"P1","P2","P3"};
 Clientes={"C1","C2","C3"};
-Fornecedores={"S1","S2"}; 
-Componentes= {"",""}
+Componentes={"X1","X2"};
+Fornecedores={"S1","S2"};
+Recursos={"R1","T1"}; 
+
+HorasDia = 8; 
+Tx = 1000;
+tempo = 45; 
+CEC = 2000;
+
+custosFornecedoresComponentes = 
+{<"X1","S1",60.0>,    
+<"X1","S2",80>,    
+<"X2","S1",30>};
+
+custosProdutos = #[
+      P1 : < 25, 10, 350, 25 >       
+      P2 : < 15, 5, 250, 15 >    
+      P3 : < 15, 5, 180, 15 >   
+          ]#;
+          
+custoProducaoProdutos=[25,15,15];
+
+custosArmazenamentoComponente = 
+{<"X1",0.5>, 
+<"X2",0.5>}; 
+
+consumosComponentes =  #[
+      P1 : < 3000, 1000 >       
+      P2 : < 2000, 1000 >    
+      P3 : < 1000, 1000 >   
+          ]#;
+          
+ConsumoR1 = [6, 4, 4];
+

@@ -2,9 +2,9 @@
 	<version>1.0</version>
 	<configs>
 		<config default="true" name="Configuration1" category="opl">
-			<ref name="companhiaXXS.mod" type="model">
+			<ref name="compXXS.mod" type="model">
 			</ref>
-			<ref name="companhiaXXS.dat" type="data">
+			<ref name="comXXS.dat" type="data">
 			</ref>
 		</config>
 	</configs>
