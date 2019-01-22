@@ -24,6 +24,7 @@ tuple consumptionData
                                    //instances of the tuple "consumptionData"
 
 productData product[Products] = ...;
+
 float availability[Resources] = ...;
 float maxOutsideProduction = ...; // The maximum amount that may be outsourced for any product.
 

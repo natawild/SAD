@@ -46,9 +46,4 @@ subject to{
     ctMaxUseOfWarehouse: sum( s in Stores ) Supply[s][w] <= Capacity[w];
 }
 
-// this script is only for clearer output in the Console and serves no computational purpose
-{int} storesof[w in Warehouses] = { s | s in Stores : Supply[s][w] == 1 };
-execute {
-   writeln("open=",open);
-   writeln("storesof=",storesof);
-}
+

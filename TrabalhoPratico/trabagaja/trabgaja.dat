@@ -1,0 +1,45 @@
+/*********************************************
+ * OPL 12.8.0.0 Data
+ * Author: Celia
+ * Creation Date: 20/01/2019 at 01:02:32
+ *********************************************/
+
+products= { "Product1", "Product2","Product3"};
+clients= {"Client1", "Client2", "Client3"};
+components= {"Component1", "Component2"};
+supliers= {"Suplier1", "Suplier2"};
+
+P=3;
+
+custoProducao = [25,15,15];
+consumoR1 = [6,4,4];
+consumoComponentes = [[3000,1000],[2000,1000],[1000,1000]];
+QtdProdutos = [1000, 1000, 1000];
+qtdstockProdutos= [1000, 1000, 1000];
+custoArmazenamentoProduto = [2,1,1];
+
+capacidadeR1 = 8;
+custoExtensao = 2000;
+
+custoUnitarioPorComponenteS1= [60, 30];
+custoUnitarioPorComponenteS2= 80;
+qtdstockComponentes = [2000, 1000];
+capacidadeTransporte = 1000;
+custoArmazenarComponente = [0.5 ,0.5];
+
+procura = [
+[
+	[2000,300,100],
+	[2000,3000,100],
+	[2000,300,100]], 
+
+[
+	[2000,300,100],
+	[2000,3000,100],
+	[2000,300,100]], 
+
+[
+	[2000,300,100],
+	[2000,3000,100],
+	[2000,300,100]]
+];
